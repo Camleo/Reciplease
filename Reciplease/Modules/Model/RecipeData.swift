@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Foundation
 
 
 //MARK: - Structures to manage data
@@ -35,6 +34,7 @@ struct Recipe: Decodable {
     let ingredientLines: [String]
     let ingredients: [Ingredient]
     let totalTime: Int?
+    let calories : Double
 }
 
 //MARK: - Ingredients
