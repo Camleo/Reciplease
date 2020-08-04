@@ -16,9 +16,9 @@ final class CoreDataManager {
     private let coreDataStack: CoreDataStack
     private let managedObjectContext: NSManagedObjectContext
     
-    var favoritesRecipes: [FavoritesRecipesList] {
-        let request: NSFetchRequest<FavoritesRecipesList> = FavoritesRecipesList.fetchRequest()
-        guard let recipes = try? ManagedObjectContext.fetch(request) else { return [] }
+    var favoritesRecipes: [RecipeEntity] {
+        let request: NSFetchRequest<RecipeEntity> = RecipeEntity.fetchRequest()
+        guard let recipes = try? managedObjectContext.fetch(request) else { return [] }
         return recipes
     }
     
@@ -34,7 +34,7 @@ final class CoreDataManager {
     
     /// Add Favorite recipes to the list
     func addRecipesToFavorite(name: String, image: Data, ingredientsDescription: [String], recipeUrl: String, time: String, yield: String) {
-        let recipe = FavoritesRecipesList(context: managedObjectContext)
+        let recipe = RecipeEntity(context: managedObjectContext)
         recipe.name = name
         recipe.image = image
         recipe.ingredients = ingredientsDescription

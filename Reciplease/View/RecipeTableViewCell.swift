@@ -16,5 +16,25 @@ class RecipeTableViewCell: UITableViewCell {
     @IBOutlet weak var totalTimeLabel: UILabel!
     @IBOutlet weak var ingredientLabel: UILabel!
     
-    
+    var recipe: Hit? {
+           didSet {
+               guard let recipe = recipe else { return }
+               titleLabel.text = recipe.recipe.label
+               totalTimeLabel.text = recipe.recipe.totalTime?.convertIntToTime
+               if recipe.recipe.yield == 0 {
+                   yieldLabel.text = "NA"
+               } else {
+                   yieldLabel.text = "\(recipe.recipe.yield ?? 0)"
+               }
+               ingredientLabel.text = recipe.recipe.ingredients[0].text
+               guard let image = recipe.recipe.image else {return}
+               guard let url = URL(string: image) else {return}
+               DispatchQueue.global().async {
+                   let data = try? Data(contentsOf: url)
+                   DispatchQueue.main.async {
+                       self.recipeImageView.image = UIImage(data: data! as Data)
+                   }
+               }
+           }
+       }
 }

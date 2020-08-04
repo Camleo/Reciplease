@@ -39,7 +39,7 @@ final class RecipeService{
                 callback(.failure(RecipleaseError.incorrectResponse))
                 return
             }
-            guard let dataDecoded = try? JSONDecoder().decode(Reciplease.self, from: data) else {
+            guard let dataDecoded = try? JSONDecoder().decode(RecipeSearch.self, from: data) else {
                 callback(.failure(RecipleaseError.undecodable))
                 return
             }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dkv-eZ-7qs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dkv-eZ-7qs">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -38,6 +38,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.73545116190000004" green="0.83734530210000002" blue="0.42736333609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="27"/>
                         </textAttributes>
@@ -99,6 +100,9 @@
                                                 <state key="normal" title="Add">
                                                     <color key="titleColor" red="0.94333755969999999" green="0.48908935879999998" blue="0.084231203929999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapButtonAdd:" destination="Etl-Ex-9jm" eventType="touchUpInside" id="e1P-Jt-AjV"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -125,6 +129,9 @@
                                 <state key="normal" title="Search">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapSearch:" destination="Etl-Ex-9jm" eventType="touchUpInside" id="2vw-fv-0VC"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="0aV-Cr-L4g">
                                 <rect key="frame" x="8" y="226" width="399" height="44"/>
@@ -143,33 +150,52 @@
                                         <state key="normal" title="Clear">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clearButton:" destination="Etl-Ex-9jm" eventType="touchUpInside" id="O5h-l7-vNZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cVk-wh-Do9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cVk-wh-Do9">
                                 <rect key="frame" x="30" y="292" width="354" height="359"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.21554160119999999" green="0.20008558030000001" blue="0.1960778534" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.211648643" green="0.20408394930000001" blue="0.19607743620000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IngredientCell" textLabel="Nhg-Zs-p7x" style="IBUITableViewCellStyleDefault" id="yfP-Y5-qa0" customClass="IngredientTableViewCell" customModule="Reciplease" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="354" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IngredientCell" textLabel="Nhg-Zs-p7x" style="IBUITableViewCellStyleDefault" id="yfP-Y5-qa0" customClass="IngredientTableViewCell" customModule="Reciplease" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="354" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yfP-Y5-qa0" id="Oaf-5U-cWH">
-                                            <rect key="frame" x="0.0" y="0.0" width="354" height="43.666667938232422"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yfP-Y5-qa0" id="Oaf-5U-cWH" customClass="IngredientTableViewCell" customModule="Reciplease" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nhg-Zs-p7x">
-                                                    <rect key="frame" x="20" y="0.0" width="314" height="43.666667938232422"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nhg-Zs-p7x">
+                                                    <rect key="frame" x="20" y="0.0" width="314" height="57"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="backgroundColor" red="0.21554160119999999" green="0.20008558030000001" blue="0.1960778534" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.21554160119999999" green="0.20008558030000001" blue="0.1960778534" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.21554160119999999" green="0.20008558030000001" blue="0.1960778534" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="ingredientLabel" destination="Nhg-Zs-p7x" id="HHc-L7-2mC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Etl-Ex-9jm" id="ewc-DU-B5u"/>
+                                    <outlet property="delegate" destination="Etl-Ex-9jm" id="Pb1-7a-Jmm"/>
+                                </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="n7r-sr-OVZ">
+                                <rect key="frame" x="188.66666666666666" y="751" width="37" height="37"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -178,9 +204,11 @@
                             <constraint firstItem="jgp-7r-XXA" firstAttribute="top" secondItem="aDE-tp-UfT" secondAttribute="top" id="44x-tD-WLe"/>
                             <constraint firstItem="aDE-tp-UfT" firstAttribute="trailing" secondItem="jgp-7r-XXA" secondAttribute="trailing" id="ATz-Ei-Gkp"/>
                             <constraint firstItem="aDE-tp-UfT" firstAttribute="trailing" secondItem="0aV-Cr-L4g" secondAttribute="trailing" constant="7" id="Gn1-Hs-Yj6"/>
+                            <constraint firstItem="n7r-sr-OVZ" firstAttribute="centerX" secondItem="5e0-kI-JlG" secondAttribute="centerX" id="Io0-Lk-PKX"/>
                             <constraint firstItem="0aV-Cr-L4g" firstAttribute="top" secondItem="jgp-7r-XXA" secondAttribute="bottom" constant="10" id="M2S-nc-qKA"/>
                             <constraint firstItem="dVX-Lv-5Op" firstAttribute="width" secondItem="5IN-Ck-3EC" secondAttribute="width" multiplier="0.993651" id="M6j-ty-c8q"/>
                             <constraint firstItem="cVk-wh-Do9" firstAttribute="top" secondItem="0aV-Cr-L4g" secondAttribute="bottom" constant="22" id="QX1-WE-CGo"/>
+                            <constraint firstItem="aDE-tp-UfT" firstAttribute="bottom" secondItem="n7r-sr-OVZ" secondAttribute="bottom" constant="25" id="aPf-oa-y8p"/>
                             <constraint firstItem="dVX-Lv-5Op" firstAttribute="height" secondItem="5IN-Ck-3EC" secondAttribute="height" id="dje-a8-rHB"/>
                             <constraint firstItem="77S-W8-J7d" firstAttribute="leading" secondItem="aDE-tp-UfT" secondAttribute="leading" constant="102" id="mBz-10-ACN"/>
                             <constraint firstItem="cVk-wh-Do9" firstAttribute="leading" secondItem="aDE-tp-UfT" secondAttribute="leading" constant="30" id="qWo-8X-hoU"/>
@@ -193,7 +221,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Reciplease" id="Msa-CJ-teh"/>
                     <connections>
-                        <segue destination="31C-lz-1ji" kind="show" identifier="recipeIngredients" id="bE9-mf-dU7"/>
+                        <outlet property="addButton" destination="dVX-Lv-5Op" id="NF2-L0-YqQ"/>
+                        <outlet property="ingredientsTableView" destination="cVk-wh-Do9" id="jNx-XQ-RJ4"/>
+                        <outlet property="searchActivity" destination="n7r-sr-OVZ" id="HSL-uR-LGW"/>
+                        <outlet property="searchButton" destination="77S-W8-J7d" id="2kC-qN-Du6"/>
+                        <outlet property="searchText" destination="3ZN-wO-diN" id="ejn-ES-Coz"/>
+                        <segue destination="31C-lz-1ji" kind="show" identifier="IngredientsToRecipes" id="bE9-mf-dU7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOC-Va-WEh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -203,7 +236,7 @@
         <!--Reciplease-->
         <scene sceneID="4C2-Ge-g0E">
             <objects>
-                <viewController id="31C-lz-1ji" sceneMemberID="viewController">
+                <viewController id="31C-lz-1ji" customClass="ListRecipeViewController" customModule="Reciplease" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5aR-NY-yzD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,6 +244,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nsl-DI-uiD">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="31C-lz-1ji" id="bQF-Ti-maG"/>
+                                    <outlet property="delegate" destination="31C-lz-1ji" id="iQE-RO-7wb"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -224,6 +262,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Reciplease" id="RhR-tH-GUR"/>
                     <connections>
+                        <outlet property="recipesTableView" destination="nsl-DI-uiD" id="abU-H9-W6l"/>
                         <segue destination="fff-og-TzV" kind="show" identifier="RecipeDetail" id="qnV-fi-tJE"/>
                     </connections>
                 </viewController>
@@ -421,7 +460,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aTP-xC-aCg"/>
+        <segue reference="qnV-fi-tJE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Yield" width="900" height="800"/>
