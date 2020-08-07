@@ -54,8 +54,7 @@ class IngredientsViewController: UIViewController, UITextFieldDelegate {
         }
     
     @IBAction func didTapSearch(_ sender: Any) {
-        guard ingredients.count >= 1 else { return
-            alert(message: "add an ingredient") }
+        guard ingredients.count >= 1 else { return alert(message: "add an ingredient") }
         loadRecipes()
     }
     

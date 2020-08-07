@@ -44,9 +44,28 @@ final class CoreDataManager {
         coreDataStack.saveContext()
     }
     
+    /// Delete recipe from favorite thanks to his name
+       func deleteRecipeFromFavorite(recipeName: String) {
+           let request: NSFetchRequest<RecipeEntity> = RecipeEntity.fetchRequest()
+           let predicate = NSPredicate(format: "name == %@", recipeName)
+           request.predicate = predicate
+           if let objects = try? managedObjectContext.fetch(request) {
+               objects.forEach { managedObjectContext.delete($0)}
+           }
+           coreDataStack.saveContext()
+       }
+    
     /// Delete all favorites in the list
     func deleteAllFavorites() {
         favoritesRecipes.forEach { managedObjectContext.delete($0)}
         coreDataStack.saveContext()
+    }
+    func checkIfRecipeIsAlreadyInYourFavorite(recipeName: String) -> Bool {
+        let request: NSFetchRequest<RecipeEntity> = RecipeEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "name ==  %@", recipeName)
+        guard let recipes = try? managedObjectContext.fetch(request) else {return false }
+        if recipes.isEmpty {return false }
+        return true
+
     }
 }

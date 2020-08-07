@@ -19,6 +19,9 @@
 		815F71C524B369B30011FE3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815F71C324B369B30011FE3E /* LaunchScreen.storyboard */; };
 		815F71CE24B3BAB70011FE3E /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F71CD24B3BAB70011FE3E /* IngredientsViewController.swift */; };
 		815F71D724B3C8DA0011FE3E /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F71D624B3C8DA0011FE3E /* RecipeData.swift */; };
+		8192F87524DC7780001D5C60 /* FavoriteRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192F87424DC7780001D5C60 /* FavoriteRecipeViewController.swift */; };
+		8192F87C24DDF29A001D5C60 /* MockCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192F87B24DDF29A001D5C60 /* MockCoreDataStack.swift */; };
+		8192F87E24DDF69D001D5C60 /* CoreDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192F87D24DDF69D001D5C60 /* CoreDataManagerTests.swift */; };
 		81B001C424D42A9C00B75457 /* Reciplease.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81B001C224D42A9C00B75457 /* Reciplease.xcdatamodeld */; };
 		81B001C624D42B8400B75457 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B001C524D42B8400B75457 /* CoreDataStack.swift */; };
 		81B001C824D42BBD00B75457 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B001C724D42BBD00B75457 /* CoreDataManager.swift */; };
@@ -33,7 +36,7 @@
 		81E5183924BD9A4200E63CB1 /* EdamanTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5183824BD9A4200E63CB1 /* EdamanTestCase.swift */; };
 		81E5183B24BD9B2C00E63CB1 /* Edaman.json in Resources */ = {isa = PBXBuildFile; fileRef = 81E5183A24BD9B2C00E63CB1 /* Edaman.json */; };
 		81E5183D24BD9BAC00E63CB1 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5183C24BD9BAC00E63CB1 /* FakeResponseData.swift */; };
-		81E5183F24BD9C1A00E63CB1 /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5183E24BD9C1A00E63CB1 /* URLSessionFake.swift */; };
+		81E5183F24BD9C1A00E63CB1 /* MockRecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5183E24BD9C1A00E63CB1 /* MockRecipeService.swift */; };
 		C7CB6AFE7D2CAE16CDC0BACB /* Pods_RecipleaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B65AB82C26D4EE2DFC0B83B /* Pods_RecipleaseTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +67,9 @@
 		815F71C624B369B30011FE3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815F71CD24B3BAB70011FE3E /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		815F71D624B3C8DA0011FE3E /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
+		8192F87424DC7780001D5C60 /* FavoriteRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeViewController.swift; sourceTree = "<group>"; };
+		8192F87B24DDF29A001D5C60 /* MockCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataStack.swift; sourceTree = "<group>"; };
+		8192F87D24DDF69D001D5C60 /* CoreDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerTests.swift; sourceTree = "<group>"; };
 		81B001C324D42A9C00B75457 /* Reciplease.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reciplease.xcdatamodel; sourceTree = "<group>"; };
 		81B001C524D42B8400B75457 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		81B001C724D42BBD00B75457 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -80,7 +86,7 @@
 		81E5183824BD9A4200E63CB1 /* EdamanTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamanTestCase.swift; sourceTree = "<group>"; };
 		81E5183A24BD9B2C00E63CB1 /* Edaman.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Edaman.json; sourceTree = "<group>"; };
 		81E5183C24BD9BAC00E63CB1 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
-		81E5183E24BD9C1A00E63CB1 /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
+		81E5183E24BD9C1A00E63CB1 /* MockRecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecipeService.swift; sourceTree = "<group>"; };
 		8C84EC8FBC0C2585C973A8E2 /* Pods_Reciplease.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reciplease.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9568FD7476CDB7E10F84061 /* Pods-Reciplease.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reciplease.release.xcconfig"; path = "Target Support Files/Pods-Reciplease/Pods-Reciplease.release.xcconfig"; sourceTree = "<group>"; };
 		CA3028AA0D3049775D33D3A5 /* Pods-RecipleaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipleaseTests.release.xcconfig"; path = "Target Support Files/Pods-RecipleaseTests/Pods-RecipleaseTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 			children = (
 				815F71B724B369B10011FE3E /* Reciplease */,
 				81E5182F24BD985A00E63CB1 /* RecipleaseTests */,
+				8192F87824DDF0DC001D5C60 /* RecipleaseWithCoreDataTests */,
 				815F71B624B369B10011FE3E /* Products */,
 				9BA67B87ED14A80482D270EF /* Pods */,
 				BBEAA705F33527661758F2F4 /* Frameworks */,
@@ -144,6 +151,7 @@
 				815F71CD24B3BAB70011FE3E /* IngredientsViewController.swift */,
 				81CCF09624D89430002B1EA8 /* ListRecipeViewController.swift */,
 				812C410024B64A2F00828353 /* DetailRecipeViewController.swift */,
+				8192F87424DC7780001D5C60 /* FavoriteRecipeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +177,15 @@
 				815F71C124B369B30011FE3E /* Assets.xcassets */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		8192F87824DDF0DC001D5C60 /* RecipleaseWithCoreDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				8192F87B24DDF29A001D5C60 /* MockCoreDataStack.swift */,
+				8192F87D24DDF69D001D5C60 /* CoreDataManagerTests.swift */,
+			);
+			path = RecipleaseWithCoreDataTests;
 			sourceTree = "<group>";
 		};
 		81B001C024D42A1700B75457 /* Modules */ = {
@@ -219,7 +236,7 @@
 				81E5183824BD9A4200E63CB1 /* EdamanTestCase.swift */,
 				81E5183A24BD9B2C00E63CB1 /* Edaman.json */,
 				81E5183C24BD9BAC00E63CB1 /* FakeResponseData.swift */,
-				81E5183E24BD9C1A00E63CB1 /* URLSessionFake.swift */,
+				81E5183E24BD9C1A00E63CB1 /* MockRecipeService.swift */,
 			);
 			path = RecipleaseTests;
 			sourceTree = "<group>";
@@ -427,6 +444,7 @@
 				812C40FD24B6460400828353 /* RecipeTableViewCell.swift in Sources */,
 				81B001C824D42BBD00B75457 /* CoreDataManager.swift in Sources */,
 				81B001CD24D434EC00B75457 /* RecipeService.swift in Sources */,
+				8192F87524DC7780001D5C60 /* FavoriteRecipeViewController.swift in Sources */,
 				812C40F524B4BC8800828353 /* IngredientTableViewCell.swift in Sources */,
 				815F71B924B369B10011FE3E /* AppDelegate.swift in Sources */,
 				81CCF09724D89430002B1EA8 /* ListRecipeViewController.swift in Sources */,
@@ -441,8 +459,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E5183924BD9A4200E63CB1 /* EdamanTestCase.swift in Sources */,
-				81E5183F24BD9C1A00E63CB1 /* URLSessionFake.swift in Sources */,
+				81E5183F24BD9C1A00E63CB1 /* MockRecipeService.swift in Sources */,
 				81E5183D24BD9BAC00E63CB1 /* FakeResponseData.swift in Sources */,
+				8192F87E24DDF69D001D5C60 /* CoreDataManagerTests.swift in Sources */,
+				8192F87C24DDF29A001D5C60 /* MockCoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

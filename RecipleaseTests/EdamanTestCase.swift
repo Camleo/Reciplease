@@ -9,19 +9,14 @@
 import XCTest
 
 class EdamanTestCase: XCTestCase {
-    
-    let requestCall = RequestCall()
-    let url = URL(string: "https://api.edamam.com/search")!
-    
-    
-    
+
     // MARK: - Error
     func testGetRecipeShouldPostFailedCallbackError() {
         
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change")
         
-        let fixer = RequestCall(networkCall: NetworkCall(session: URLSessionFake(data: nil, response: nil, error: FakeResponseData.error)))
+        let fixer = RequestCall(networkCall: NetworkCall(session: MockRecipeService(data: nil, response: nil, error: FakeResponseData.error)))
         
         fixer.request(baseUrl: url, parameters: [("app_key", "0bfdb8eed80ddc3cdd44e6fe694dcc66"), ("app_id", "5a108179"), ("calories", "1200-2500"), ("to", "30"), ("q", "Burger")]) { (result: Result<RecipeSearch, NetWorkError>) in
             guard case .failure(let error) = result else {
@@ -41,7 +36,7 @@ class EdamanTestCase: XCTestCase {
     // MARK: - No data
     func testGetRecipeShouldPostFailedCallbackIfNodData() {
         // Given
-        let fixer = RequestCall(networkCall: NetworkCall(session: URLSessionFake(data: FakeResponseData.incorrectData, response: nil, error: FakeResponseData.error)))
+        let fixer = RequestCall(networkCall: NetworkCall(session: MockRecipeService(data: FakeResponseData.incorrectData, response: nil, error: FakeResponseData.error)))
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change")
         
@@ -60,7 +55,7 @@ class EdamanTestCase: XCTestCase {
     // MARK: - Incorrect response
     func testGetRecipeShouldPostFailedCallbackIfIncorrectResponse() {
         // Given
-        let fixer = RequestCall(networkCall: NetworkCall(session: URLSessionFake(data: FakeResponseData.recipeCorrectData, response: FakeResponseData.responseKO, error: nil)))
+        let fixer = RequestCall(networkCall: NetworkCall(session: MockRecipeService(data: FakeResponseData.recipeCorrectData, response: FakeResponseData.responseKO, error: nil)))
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change")
         
@@ -78,7 +73,7 @@ class EdamanTestCase: XCTestCase {
     // MARK: - Undecodable data
     func testGetRecipeShouldPostFailedCallbackIfIncorrectData() {
         // Given
-        let fixer = RequestCall(networkCall: NetworkCall(session: URLSessionFake(data: FakeResponseData.incorrectData, response: FakeResponseData.responseOK, error: nil)))
+        let fixer = RequestCall(networkCall: NetworkCall(session: MockRecipeService(data: FakeResponseData.incorrectData, response: FakeResponseData.responseOK, error: nil)))
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change")
         
@@ -98,7 +93,7 @@ class EdamanTestCase: XCTestCase {
     // MARK: - Success
     func testGetRecipeShouldPostSuccessCallbackIfNoMissingData() {
         // Given
-        let fixer = RequestCall(networkCall: NetworkCall(session: URLSessionFake(data: FakeResponseData.recipeCorrectData, response: FakeResponseData.responseOK, error: nil)))
+        let fixer = RequestCall(networkCall: NetworkCall(session: MockRecipeService(data: FakeResponseData.recipeCorrectData, response: FakeResponseData.responseOK, error: nil)))
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change")
         
@@ -119,7 +114,7 @@ class EdamanTestCase: XCTestCase {
     func testGetRecipeShoulPostFailedCallBackError() {
         //Given
         let recipe = EdamanService()
-        let service = RequestCall(networkCall: NetworkCall(session: URLSessionFake(data: FakeResponseData.recipeCorrectData, response: FakeResponseData.responseOK, error: nil)))
+        let service = RequestCall(networkCall: NetworkCall(session: MockRecipeService(data: FakeResponseData.recipeCorrectData, response: FakeResponseData.responseOK, error: nil)))
         // When
         service.request(baseUrl: url, parameters: [("app_key", "0bfdb8eed80ddc3cdd44e6fe694dcc66"), ("app_id", "5a108179"), ("calories", "1200-2500"), ("to", "30"), ("q", "Burger")]) { (result: Result<RecipeSearch, NetWorkError>) in
             recipe.getRecipe { result in

@@ -29,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="-2581" y="567"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Search-->
         <scene sceneID="8CN-lL-4ZG">
             <objects>
-                <navigationController id="E6a-0F-IAj" sceneMemberID="viewController">
+                <navigationController id="E6a-0F-IAj" userLabel="Search" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="search" id="V2Y-56-ema"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jlg-Yx-ikQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="-1517" y="88"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favorite-->
         <scene sceneID="5FY-09-tVb">
             <objects>
-                <navigationController id="rze-yo-s1J" sceneMemberID="viewController">
+                <navigationController id="rze-yo-s1J" userLabel="Favorite" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="0lI-yR-kgq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bvE-Pe-exJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="-1517" y="960"/>
         </scene>
-        <!--Reciplease-->
+        <!--IngredientsViewController-->
         <scene sceneID="e6k-Hy-r5S">
             <objects>
-                <viewController id="Etl-Ex-9jm" customClass="IngredientsViewController" customModule="Reciplease" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Etl-Ex-9jm" userLabel="IngredientsViewController" customClass="IngredientsViewController" customModule="Reciplease" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5e0-kI-JlG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +79,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgp-7r-XXA">
                                 <rect key="frame" x="0.0" y="88" width="414" height="128"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's In your Fridge ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAT-hm-a4w">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's in your Fridge ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAT-hm-a4w">
                                         <rect key="frame" x="0.0" y="8" width="414" height="40.666666666666664"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
@@ -157,7 +157,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cVk-wh-Do9">
-                                <rect key="frame" x="30" y="292" width="354" height="359"/>
+                                <rect key="frame" x="30" y="292" width="354" height="424"/>
                                 <color key="backgroundColor" red="0.21554160119999999" green="0.20008558030000001" blue="0.1960778534" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.211648643" green="0.20408394930000001" blue="0.19607743620000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -199,7 +199,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="77S-W8-J7d" firstAttribute="top" secondItem="cVk-wh-Do9" secondAttribute="bottom" constant="95" id="12t-e6-IuG"/>
+                            <constraint firstItem="77S-W8-J7d" firstAttribute="top" secondItem="cVk-wh-Do9" secondAttribute="bottom" constant="30" id="12t-e6-IuG"/>
                             <constraint firstItem="aDE-tp-UfT" firstAttribute="trailing" secondItem="77S-W8-J7d" secondAttribute="trailing" constant="101" id="1q9-nu-mqU"/>
                             <constraint firstItem="jgp-7r-XXA" firstAttribute="top" secondItem="aDE-tp-UfT" secondAttribute="top" id="44x-tD-WLe"/>
                             <constraint firstItem="aDE-tp-UfT" firstAttribute="trailing" secondItem="jgp-7r-XXA" secondAttribute="trailing" id="ATz-Ei-Gkp"/>
@@ -270,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="1140.5797101449277" y="93.75"/>
         </scene>
-        <!--Reciplease-->
+        <!--FavoriteRecipeViewController-->
         <scene sceneID="5y9-fD-RiO">
             <objects>
-                <viewController id="LQG-uN-G9Z" sceneMemberID="viewController">
+                <viewController id="LQG-uN-G9Z" userLabel="FavoriteRecipeViewController" customClass="FavoriteRecipeViewController" customModule="Reciplease" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tvL-0E-n25">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,6 +281,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nLB-2G-Lc8">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="LQG-uN-G9Z" id="co9-iY-zDe"/>
+                                    <outlet property="delegate" destination="LQG-uN-G9Z" id="lwC-Bf-3pR"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.6983108970629035" green="0.81206655500000002" blue="0.68738733324915224" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -293,22 +297,27 @@
                         <viewLayoutGuide key="safeArea" id="cUv-kz-cqO"/>
                     </view>
                     <navigationItem key="navigationItem" title="Reciplease" id="YE1-w7-t8B">
-                        <barButtonItem key="rightBarButtonItem" image="trash" catalog="system" id="vud-3D-3ID">
-                            <color key="tintColor" red="0.94333755969999999" green="0.48908935879999998" blue="0.084231203929999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="DeleteIcon" id="vud-3D-3ID">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTappedBinButton:" destination="LQG-uN-G9Z" id="w7y-KK-szg"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="fff-og-TzV" kind="show" identifier="FavoriteListe" id="aTP-xC-aCg"/>
+                        <outlet property="binButton" destination="vud-3D-3ID" id="ur7-Qw-cYR"/>
+                        <outlet property="favoriteTableView" destination="nLB-2G-Lc8" id="dYt-Ej-3Xa"/>
+                        <segue destination="fff-og-TzV" kind="show" identifier="FavoriteList" id="aTP-xC-aCg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDl-vY-u15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1141" y="960"/>
         </scene>
-        <!--Reciplease-->
+        <!--DetailRecipeViewController-->
         <scene sceneID="A9f-0Q-ccZ">
             <objects>
-                <viewController id="fff-og-TzV" customClass="DetailRecipeViewController" customModule="Reciplease" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fff-og-TzV" userLabel="DetailRecipeViewController" customClass="DetailRecipeViewController" customModule="Reciplease" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z3m-MI-0Cv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,8 +350,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="P3j-fN-Efl">
                                 <rect key="frame" x="342.66666666666669" y="376" width="61" height="20.333333333333314"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="20" placeholderIntrinsicHeight="20" image="timer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mse-iW-ngR">
-                                        <rect key="frame" x="0.0" y="0.99999999999999822" width="20" height="19"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="20" placeholderIntrinsicHeight="20" image="Time" translatesAutoresizingMaskIntoConstraints="NO" id="mse-iW-ngR">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20.333333333333332"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="35" placeholderIntrinsicHeight="20.333333333333332" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzY-fv-esp">
@@ -363,18 +372,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fc-3y-5xo">
-                                <rect key="frame" x="15" y="484.66666666666669" width="384" height="60.333333333333314"/>
+                                <rect key="frame" x="15" y="484.66666666666669" width="384" height="26.666666666666686"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9LZ-I1-ABu">
-                                <rect key="frame" x="15" y="553" width="384" height="201"/>
+                                <rect key="frame" x="15" y="519.33333333333337" width="384" height="201"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="201" id="zHJ-vM-L8h"/>
                                 </constraints>
                                 <color key="separatorColor" red="0.21554160119999999" green="0.20008558030000001" blue="0.1960778534" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IngredientsDetailCell" textLabel="2Rb-s5-IVi" style="IBUITableViewCellStyleDefault" id="Cbw-8i-7z9">
                                         <rect key="frame" x="0.0" y="28" width="384" height="43.666667938232422"/>
@@ -396,9 +406,13 @@
                                         <color key="tintColor" red="0.21554160119999999" green="0.20008558030000001" blue="0.1960778534" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fff-og-TzV" id="ydb-4P-gWq"/>
+                                    <outlet property="delegate" destination="fff-og-TzV" id="zzL-oq-UHe"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auA-qj-F1B">
-                                <rect key="frame" x="30" y="784" width="354" height="48"/>
+                                <rect key="frame" x="30" y="735" width="354" height="48"/>
                                 <color key="backgroundColor" red="0.73545116190000004" green="0.83734530210000002" blue="0.42736333609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="wPl-Lp-3DH"/>
@@ -406,20 +420,29 @@
                                 <state key="normal" title="Get Directions">
                                     <color key="titleColor" red="0.94333755969999999" green="0.48908935879999998" blue="0.084231203929999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTappedGetDirectionButton:" destination="fff-og-TzV" eventType="touchUpInside" id="aFi-vO-TCD"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="VWg-aM-75S">
+                                <rect key="frame" x="188.66666666666666" y="741" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.21554160119999999" green="0.20008558030000001" blue="0.1960778534" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="VWg-aM-75S" firstAttribute="centerX" secondItem="z3m-MI-0Cv" secondAttribute="centerX" id="4JE-Z8-0YT"/>
                             <constraint firstItem="Ouj-60-3yc" firstAttribute="centerY" secondItem="z3m-MI-0Cv" secondAttribute="centerY" id="6Fs-rM-CXK"/>
                             <constraint firstItem="DPa-dk-LSh" firstAttribute="trailing" secondItem="P3j-fN-Efl" secondAttribute="trailing" constant="10.333333333333371" id="9Yr-eS-gRO"/>
                             <constraint firstItem="Ibo-q3-W6G" firstAttribute="top" secondItem="8WT-5H-nel" secondAttribute="bottom" constant="15" id="9oC-jk-cO7"/>
                             <constraint firstItem="9LZ-I1-ABu" firstAttribute="leading" secondItem="DPa-dk-LSh" secondAttribute="leading" constant="15" id="A4I-HD-yub"/>
+                            <constraint firstItem="VWg-aM-75S" firstAttribute="top" secondItem="9LZ-I1-ABu" secondAttribute="bottom" constant="20.666666666666629" id="AA9-ZV-oQk"/>
                             <constraint firstItem="auA-qj-F1B" firstAttribute="centerX" secondItem="8WT-5H-nel" secondAttribute="centerX" id="ACn-kn-wrV"/>
                             <constraint firstItem="9LZ-I1-ABu" firstAttribute="leading" secondItem="7Fc-3y-5xo" secondAttribute="leading" id="F7m-cN-OQc"/>
                             <constraint firstItem="8WT-5H-nel" firstAttribute="leading" secondItem="DPa-dk-LSh" secondAttribute="leading" id="LQb-Ud-2TK"/>
                             <constraint firstItem="8WT-5H-nel" firstAttribute="top" secondItem="DPa-dk-LSh" secondAttribute="top" id="Ofv-wQ-uvQ"/>
                             <constraint firstItem="auA-qj-F1B" firstAttribute="centerX" secondItem="9LZ-I1-ABu" secondAttribute="centerX" id="P6e-0z-fB5"/>
-                            <constraint firstItem="auA-qj-F1B" firstAttribute="top" secondItem="9LZ-I1-ABu" secondAttribute="bottom" constant="30" id="Qna-qJ-BaP"/>
+                            <constraint firstItem="auA-qj-F1B" firstAttribute="top" secondItem="9LZ-I1-ABu" secondAttribute="bottom" constant="14.666666666666742" id="Qna-qJ-BaP"/>
                             <constraint firstItem="auA-qj-F1B" firstAttribute="leading" secondItem="DPa-dk-LSh" secondAttribute="leading" constant="30" id="QwX-eC-3LG"/>
                             <constraint firstItem="DPa-dk-LSh" firstAttribute="trailing" secondItem="Ouj-60-3yc" secondAttribute="trailing" constant="15" id="bL7-UM-zB6"/>
                             <constraint firstItem="9LZ-I1-ABu" firstAttribute="top" secondItem="7Fc-3y-5xo" secondAttribute="bottom" constant="8" symbolic="YES" id="c1I-B8-5bU"/>
@@ -431,7 +454,7 @@
                             <constraint firstItem="Ibo-q3-W6G" firstAttribute="leading" secondItem="DPa-dk-LSh" secondAttribute="leading" constant="10" id="pFo-JP-Ltj"/>
                             <constraint firstItem="7Fc-3y-5xo" firstAttribute="top" secondItem="Ouj-60-3yc" secondAttribute="bottom" constant="10" id="pdl-1W-qvp"/>
                             <constraint firstItem="Ouj-60-3yc" firstAttribute="leading" secondItem="DPa-dk-LSh" secondAttribute="leading" constant="15" id="rZa-gR-CiM"/>
-                            <constraint firstItem="auA-qj-F1B" firstAttribute="bottom" secondItem="DPa-dk-LSh" secondAttribute="bottom" constant="19" id="zR0-if-dzt"/>
+                            <constraint firstItem="auA-qj-F1B" firstAttribute="bottom" secondItem="DPa-dk-LSh" secondAttribute="bottom" constant="-30" id="zR0-if-dzt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DPa-dk-LSh"/>
                     </view>
@@ -440,12 +463,16 @@
                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="C39-eZ-xhE">
                             <color key="tintColor" red="0.94333755969999999" green="0.48908935879999998" blue="0.084231203929999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="heart" catalog="system" id="jIf-8K-O90">
-                            <color key="tintColor" red="0.94333755969999999" green="0.48908935879999998" blue="0.084231203929999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="white heart" id="jIf-8K-O90">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTapFavoriteButton:" destination="fff-og-TzV" id="1kh-qi-wdq"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="favoriteButton" destination="jIf-8K-O90" id="BMD-m9-HVc"/>
+                        <outlet property="getActivityIndicator" destination="VWg-aM-75S" id="GKE-VN-h1K"/>
                         <outlet property="getDirectionButton" destination="auA-qj-F1B" id="XKi-mq-cWg"/>
                         <outlet property="ingredientDetailTableView" destination="9LZ-I1-ABu" id="pdz-Tk-0OR"/>
                         <outlet property="recipeImageView" destination="8WT-5H-nel" id="xaX-2s-F9H"/>
@@ -460,13 +487,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qnV-fi-tJE"/>
+        <segue reference="aTP-xC-aCg"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="DeleteIcon" width="30" height="30"/>
+        <image name="Time" width="50" height="50"/>
         <image name="Yield" width="900" height="800"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="search" width="40" height="40"/>
-        <image name="timer" catalog="system" width="128" height="121"/>
-        <image name="trash" catalog="system" width="121" height="128"/>
+        <image name="white heart" width="30" height="30"/>
     </resources>
 </document>

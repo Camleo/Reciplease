@@ -15,6 +15,9 @@ import Foundation
 //MARK: - RecipesSearch
 
 struct RecipeSearch: Decodable {
+    let q: String
+    let to: Int
+    let count: Int
     let hits: [Hit]
 }
 
@@ -34,7 +37,6 @@ struct Recipe: Decodable {
     let ingredientLines: [String]
     let ingredients: [Ingredient]
     let totalTime: Int?
-    let calories : Double
 }
 
 //MARK: - Ingredients
