@@ -34,7 +34,7 @@
 		81CCF09924D89511002B1EA8 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CCF09824D89511002B1EA8 /* Int.swift */; };
 		81CCF09B24D89637002B1EA8 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CCF09A24D89637002B1EA8 /* Time.swift */; };
 		81E5183924BD9A4200E63CB1 /* EdamanTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5183824BD9A4200E63CB1 /* EdamanTestCase.swift */; };
-		81E5183B24BD9B2C00E63CB1 /* Edaman.json in Resources */ = {isa = PBXBuildFile; fileRef = 81E5183A24BD9B2C00E63CB1 /* Edaman.json */; };
+		81E5183B24BD9B2C00E63CB1 /* edaman.json in Resources */ = {isa = PBXBuildFile; fileRef = 81E5183A24BD9B2C00E63CB1 /* edaman.json */; };
 		81E5183D24BD9BAC00E63CB1 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5183C24BD9BAC00E63CB1 /* FakeResponseData.swift */; };
 		81E5183F24BD9C1A00E63CB1 /* MockRecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5183E24BD9C1A00E63CB1 /* MockRecipeService.swift */; };
 		C7CB6AFE7D2CAE16CDC0BACB /* Pods_RecipleaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B65AB82C26D4EE2DFC0B83B /* Pods_RecipleaseTests.framework */; };
@@ -84,7 +84,7 @@
 		81E5182E24BD985A00E63CB1 /* RecipleaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipleaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E5183224BD985A00E63CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E5183824BD9A4200E63CB1 /* EdamanTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamanTestCase.swift; sourceTree = "<group>"; };
-		81E5183A24BD9B2C00E63CB1 /* Edaman.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Edaman.json; sourceTree = "<group>"; };
+		81E5183A24BD9B2C00E63CB1 /* edaman.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = edaman.json; sourceTree = "<group>"; };
 		81E5183C24BD9BAC00E63CB1 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
 		81E5183E24BD9C1A00E63CB1 /* MockRecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecipeService.swift; sourceTree = "<group>"; };
 		8C84EC8FBC0C2585C973A8E2 /* Pods_Reciplease.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reciplease.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,7 +234,7 @@
 			children = (
 				81E5183224BD985A00E63CB1 /* Info.plist */,
 				81E5183824BD9A4200E63CB1 /* EdamanTestCase.swift */,
-				81E5183A24BD9B2C00E63CB1 /* Edaman.json */,
+				81E5183A24BD9B2C00E63CB1 /* edaman.json */,
 				81E5183C24BD9BAC00E63CB1 /* FakeResponseData.swift */,
 				81E5183E24BD9C1A00E63CB1 /* MockRecipeService.swift */,
 			);
@@ -357,7 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81E5183B24BD9B2C00E63CB1 /* Edaman.json in Resources */,
+				81E5183B24BD9B2C00E63CB1 /* edaman.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

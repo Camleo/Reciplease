@@ -191,9 +191,9 @@
                                     <outlet property="delegate" destination="Etl-Ex-9jm" id="Pb1-7a-Jmm"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="n7r-sr-OVZ">
-                                <rect key="frame" x="188.66666666666666" y="751" width="37" height="37"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="b9k-d9-vYS">
+                                <rect key="frame" x="189" y="755" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
@@ -204,11 +204,9 @@
                             <constraint firstItem="jgp-7r-XXA" firstAttribute="top" secondItem="aDE-tp-UfT" secondAttribute="top" id="44x-tD-WLe"/>
                             <constraint firstItem="aDE-tp-UfT" firstAttribute="trailing" secondItem="jgp-7r-XXA" secondAttribute="trailing" id="ATz-Ei-Gkp"/>
                             <constraint firstItem="aDE-tp-UfT" firstAttribute="trailing" secondItem="0aV-Cr-L4g" secondAttribute="trailing" constant="7" id="Gn1-Hs-Yj6"/>
-                            <constraint firstItem="n7r-sr-OVZ" firstAttribute="centerX" secondItem="5e0-kI-JlG" secondAttribute="centerX" id="Io0-Lk-PKX"/>
                             <constraint firstItem="0aV-Cr-L4g" firstAttribute="top" secondItem="jgp-7r-XXA" secondAttribute="bottom" constant="10" id="M2S-nc-qKA"/>
                             <constraint firstItem="dVX-Lv-5Op" firstAttribute="width" secondItem="5IN-Ck-3EC" secondAttribute="width" multiplier="0.993651" id="M6j-ty-c8q"/>
                             <constraint firstItem="cVk-wh-Do9" firstAttribute="top" secondItem="0aV-Cr-L4g" secondAttribute="bottom" constant="22" id="QX1-WE-CGo"/>
-                            <constraint firstItem="aDE-tp-UfT" firstAttribute="bottom" secondItem="n7r-sr-OVZ" secondAttribute="bottom" constant="25" id="aPf-oa-y8p"/>
                             <constraint firstItem="dVX-Lv-5Op" firstAttribute="height" secondItem="5IN-Ck-3EC" secondAttribute="height" id="dje-a8-rHB"/>
                             <constraint firstItem="77S-W8-J7d" firstAttribute="leading" secondItem="aDE-tp-UfT" secondAttribute="leading" constant="102" id="mBz-10-ACN"/>
                             <constraint firstItem="cVk-wh-Do9" firstAttribute="leading" secondItem="aDE-tp-UfT" secondAttribute="leading" constant="30" id="qWo-8X-hoU"/>
@@ -223,7 +221,7 @@
                     <connections>
                         <outlet property="addButton" destination="dVX-Lv-5Op" id="NF2-L0-YqQ"/>
                         <outlet property="ingredientsTableView" destination="cVk-wh-Do9" id="jNx-XQ-RJ4"/>
-                        <outlet property="searchActivity" destination="n7r-sr-OVZ" id="HSL-uR-LGW"/>
+                        <outlet property="searchActivity" destination="b9k-d9-vYS" id="l19-Pc-GMx"/>
                         <outlet property="searchButton" destination="77S-W8-J7d" id="2kC-qN-Du6"/>
                         <outlet property="searchText" destination="3ZN-wO-diN" id="ejn-ES-Coz"/>
                         <segue destination="31C-lz-1ji" kind="show" identifier="IngredientsToRecipes" id="bE9-mf-dU7"/>
@@ -487,7 +485,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aTP-xC-aCg"/>
+        <segue reference="qnV-fi-tJE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="DeleteIcon" width="30" height="30"/>

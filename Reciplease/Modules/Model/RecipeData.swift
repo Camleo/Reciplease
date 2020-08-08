@@ -8,28 +8,21 @@
 
 import Foundation
 
-
-//MARK: - Structures to manage data
-
-
 //MARK: - RecipesSearch
 
 struct RecipeSearch: Decodable {
-    let q: String
-    let to: Int
-    let count: Int
     let hits: [Hit]
 }
 
 //MARK: - Hit
 
 struct Hit: Decodable {
-    let recipe: Recipe
+    let recipe: Recipes
 }
 
 //MARK: - Recipe
 
-struct Recipe: Decodable {
+struct Recipes: Decodable {
     let label: String
     let image: String?
     let url: String

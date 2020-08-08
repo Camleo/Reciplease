@@ -12,9 +12,9 @@ class IngredientsViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Properties
     
+    var recipesSearch: RecipeSearch?
     var ingredients: [String] = []
     var recipeService = RecipeService()
-    var recipesSearch: RecipeSearch?
     let indentifierSegue = "IngredientsToRecipes"
     
    //MARK: - Outlets
@@ -33,13 +33,14 @@ class IngredientsViewController: UIViewController, UITextFieldDelegate {
         // Dissmiss Keyboard
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
-        manageActivityIndicator(activityIndicator: searchActivity, button: searchButton, showActivityIndicator: false)
+         manageActivityIndicator(activityIndicator: searchActivity, button: searchButton, showActivityIndicator: false)
     }
     
     //MARK: - Configure segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let recipesVC = segue.destination as? ListRecipeViewController {
+        if segue.identifier == indentifierSegue {
+            let recipesVC = segue.destination as! ListRecipeViewController
             recipesVC.recipesSearch = recipesSearch
         }
     }
@@ -54,8 +55,8 @@ class IngredientsViewController: UIViewController, UITextFieldDelegate {
         }
     
     @IBAction func didTapSearch(_ sender: Any) {
-        guard ingredients.count >= 1 else { return alert(message: "add an ingredient") }
-        loadRecipes()
+          guard ingredients.count >= 1 else { return alert(message: "add an ingredient") }
+        getRecipes()
     }
     
     @IBAction func clearButton(_ sender: Any) {
@@ -77,7 +78,7 @@ class IngredientsViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Methods
     
 
-    func loadRecipes() {
+    func getRecipes() {
         manageActivityIndicator(activityIndicator: searchActivity, button: searchButton, showActivityIndicator: true)
         recipeService.getRecipes(ingredients: ingredients) { result in
             DispatchQueue.main.async {
@@ -92,7 +93,6 @@ class IngredientsViewController: UIViewController, UITextFieldDelegate {
         }
     }
 }
-    
     //MARK: - Extension TableView
     
     extension IngredientsViewController: UITableViewDataSource {

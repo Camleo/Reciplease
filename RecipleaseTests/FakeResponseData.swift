@@ -18,7 +18,7 @@ final class FakeResponseData {
     
     static var correctData: Data {
         let bundle = Bundle(for: FakeResponseData.self)
-        let url = bundle.url(forResource: "Edaman", withExtension: "json")
+        let url = bundle.url(forResource: "edaman", withExtension: "json")
         let data = try! Data(contentsOf: url!)
         return data
     }

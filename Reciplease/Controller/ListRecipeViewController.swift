@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 final class ListRecipeViewController: UIViewController {
     
@@ -14,7 +15,7 @@ final class ListRecipeViewController: UIViewController {
     
     var recipesSearch: RecipeSearch?
     var recipeDisplay: RecipeDisplay?
-    
+    let indentifierSegue = "RecipeDetail"
     //MARK: - Outlets
     
     @IBOutlet weak var recipesTableView: UITableView!
@@ -29,14 +30,12 @@ final class ListRecipeViewController: UIViewController {
     //MARK: - Configure segue to DetailRecipe
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "RecipeDetail" else {
-            return
+        if segue.identifier == indentifierSegue {
+            let recipesVc = segue.destination as! DetailRecipeViewController
+            recipesVc.recipeDisplay = recipeDisplay
         }
-        guard let recipesVc = segue.destination as? DetailRecipeViewController else {return}
-        recipesVc.recipeDisplay = recipeDisplay
     }
 }
-
 //MARK: - TableView
 
 extension ListRecipeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -55,17 +54,17 @@ extension ListRecipeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     // configure message if no recipe is found
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-           let label = UILabel()
-           label.text = "Not find recipes, try again !"
-           label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
-           label.textAlignment = .center
-           label.textColor = .darkGray
-           return label
-       }
+        let label = UILabel()
+        label.text = "Not find recipes, try again !"
+        label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        label.textAlignment = .center
+        label.textColor = .darkGray
+        return label
+    }
     // configure height for footer in section
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return recipesSearch?.hits.isEmpty ?? true ? 200 : 0
-       }
+    }
     // configure height of cell
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
