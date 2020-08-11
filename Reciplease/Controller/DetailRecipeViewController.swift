@@ -65,12 +65,12 @@ extension DetailRecipeViewController {
             return }
         favoriteButton.image = UIImage(named: "black heart")
     }
-    /// add recipes to coredata
-    private func addRecipeToFavorite() {
-        guard let name = recipeDisplay?.label, let image = recipeDisplay?.image, let ingredients = recipeDisplay?.ingredients, let url = recipeDisplay?.url, let time = recipeDisplay?.totalTime, let yield = recipeDisplay?.yield else {return}
-        coreDataManager?.addRecipesToFavorite(name: name, image: image, ingredientsDescription: ingredients, recipeUrl: url, time: time, yield: yield)
+     /// add recipes to coredata
+        private func addRecipeToFavorite() {
+            guard let name = recipeDisplay?.label, let image = recipeDisplay?.image, let ingredients = recipeDisplay?.ingredients, let url = recipeDisplay?.url, let time = recipeDisplay?.totalTime, let yield = recipeDisplay?.yield else {return}
+            coreDataManager?.addRecipesToFavorite(name: name, image: image, ingredientsDescription: ingredients, recipeUrl: url, time: time, yield: yield)
+        }
     }
-}
 
 // MARK: - Actions
 

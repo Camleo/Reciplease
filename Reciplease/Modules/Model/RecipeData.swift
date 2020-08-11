@@ -11,17 +11,18 @@ import Foundation
 //MARK: - RecipesSearch
 
 struct RecipeSearch: Decodable {
+    let q: String?
+    let to: Int?
+    let count: Int?
     let hits: [Hit]
 }
 
 //MARK: - Hit
-
 struct Hit: Decodable {
     let recipe: Recipes
 }
 
 //MARK: - Recipe
-
 struct Recipes: Decodable {
     let label: String
     let image: String?
@@ -33,14 +34,12 @@ struct Recipes: Decodable {
 }
 
 //MARK: - Ingredients
-
 struct Ingredient: Decodable {
     let text: String
     let weight: Double
 }
 
 //MARK: - RecipeDisplay
-
 struct RecipeDisplay {
     let label: String
     let image: Data?

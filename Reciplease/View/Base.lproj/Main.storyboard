@@ -224,7 +224,7 @@
                         <outlet property="searchActivity" destination="b9k-d9-vYS" id="l19-Pc-GMx"/>
                         <outlet property="searchButton" destination="77S-W8-J7d" id="2kC-qN-Du6"/>
                         <outlet property="searchText" destination="3ZN-wO-diN" id="ejn-ES-Coz"/>
-                        <segue destination="31C-lz-1ji" kind="show" identifier="IngredientsToRecipes" id="bE9-mf-dU7"/>
+                        <segue destination="31C-lz-1ji" kind="show" identifier="ToRecipes" id="bE9-mf-dU7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOC-Va-WEh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -11,6 +11,6 @@ import Foundation
 //MARK: - Structure to manage API
 
 struct ApiSet  {
-    static let app_id = "c69ff107"
-    static let app_key = "8ab83ac0ed80a9624c2127ffaea5e3a2"
+    static let app_id = "5a108179"
+    static let app_key = "0bfdb8eed80ddc3cdd44e6fe694dcc66"
 }

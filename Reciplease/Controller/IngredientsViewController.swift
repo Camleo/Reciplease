@@ -13,15 +13,15 @@ class IngredientsViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Properties
     
     var recipesSearch: RecipeSearch?
-    var ingredients: [String] = []
+    var ingredients = [String]()
     var recipeService = RecipeService()
-    let indentifierSegue = "IngredientsToRecipes"
+    let indentifierSegue = "ToRecipes"
     
    //MARK: - Outlets
     
     @IBOutlet weak var searchText: UITextField!
     @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var ingredientsTableView: UITableView!
+    @IBOutlet weak var ingredientsTableView: UITableView! { didSet { ingredientsTableView.tableFooterView = UIView() }}
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var searchActivity: UIActivityIndicatorView!
     
@@ -55,9 +55,20 @@ class IngredientsViewController: UIViewController, UITextFieldDelegate {
         }
     
     @IBAction func didTapSearch(_ sender: Any) {
-          guard ingredients.count >= 1 else { return alert(message: "add an ingredient") }
-        getRecipes()
-    }
+          guard ingredients.count != 0 else { return alert(message: "add an ingredient") }
+        manageActivityIndicator(activityIndicator: searchActivity, button: searchButton, showActivityIndicator: true)
+               recipeService.getRecipes(ingredients: ingredients) { result in
+                   DispatchQueue.main.async {
+                       switch result {
+                       case.success(let recipes):
+                           self.recipesSearch = recipes
+                           self.performSegue(withIdentifier: self.indentifierSegue, sender: nil)
+                       case.failure: self.alert(message: "incorrect request")
+                       }
+                       self.manageActivityIndicator(activityIndicator: self.searchActivity, button: self.searchButton, showActivityIndicator: false)
+                   }
+               }
+           }
     
     @IBAction func clearButton(_ sender: Any) {
         // ask user if he wants to delete all ingredients
@@ -74,25 +85,8 @@ class IngredientsViewController: UIViewController, UITextFieldDelegate {
         alerUserDelete.addAction(cancel)
         present(alerUserDelete, animated: true, completion: nil)
     }
-    
-    // MARK: - Methods
-    
-
-    func getRecipes() {
-        manageActivityIndicator(activityIndicator: searchActivity, button: searchButton, showActivityIndicator: true)
-        recipeService.getRecipes(ingredients: ingredients) { result in
-            DispatchQueue.main.async {
-                switch result {
-                case.success(let recipes):
-                    self.recipesSearch = recipes
-                    self.performSegue(withIdentifier: self.indentifierSegue, sender: nil)
-                case.failure: self.alert(message: "incorrect request")
-                }
-                self.manageActivityIndicator(activityIndicator: self.searchActivity, button: self.searchButton, showActivityIndicator: false)
-            }
-        }
-    }
 }
+
     //MARK: - Extension TableView
     
     extension IngredientsViewController: UITableViewDataSource {
